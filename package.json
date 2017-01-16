@@ -1,0 +1,27 @@
+{
+  "name": "discord-selfbot",
+  "version": "0.5.0",
+  "description": "Base to make SelfBots",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBITLINK/SelfBotBase.git"
+  },
+  "author": "TheBITLINK aka BIT <me@thebitlink.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheBITLINK/SelfBotBase/issues"
+  },
+  "homepage": "https://github.com/TheBITLINK/SelfBotBase#readme",
+  "dependencies": {
+    "aesthetics": "^2.0.8",
+    "chance": "^1.0.4",
+    "coffee-script": "https://github.com/connec/coffeescript/archive/es2015-classes-new.tar.gz",
+    "focabot-core": "^1.1.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
