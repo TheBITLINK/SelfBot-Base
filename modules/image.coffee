@@ -1,10 +1,14 @@
 Chance = require 'chance'
 request = require 'request'
+fs = require 'fs'
+path = require 'path'
 { spawn } = require 'child_process'
 
 # This module requires imagemagick installed and on PATH
 class ImageModule extends BotModule
   init: =>
+    @images = path.join(__dirname, '../images')
+
     @registerCommand 'trigger', {everyone: true}, (msg, args)=>
       # Get the avatar
       u = msg.mentions[0] or msg.author
@@ -46,5 +50,10 @@ class ImageModule extends BotModule
       p.stdout.on 'data', (d)=> b.push(d)
       p.stdout.on 'end', =>
         msg.channel.uploadFile Buffer.concat(b), 'spoiler.gif', mstr
+
+    # Example command for custom image command.
+    # Place the image files in the "images" folder.
+    @registerCommand 'example', { everyone: true }, (msg, args)=>
+      msg.channel.uploadFile fs.createReadStream("#{@images}/example.png"), 'example.png'
 
 module.exports = ImageModule
