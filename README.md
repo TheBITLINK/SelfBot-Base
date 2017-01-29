@@ -30,5 +30,4 @@ It's meant to be extended, and it's pretty easy to make your own modules. Some b
     - `npm install`
     - `npm start`
 - Your SelfBot should now be running! Test it typing `me!ping` in any Discord chat. (assuming your prefix is `me!`).
-- Your SelfBot will keep running as long as you leave CMD open, if you want to start it again, the `npm install` step is
-  only necessary the first time.
+- Your SelfBot will keep running as long as you leave CMD open, if you want to start it again, only `npm start` will be necessary.
