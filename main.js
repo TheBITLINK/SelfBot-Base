@@ -1,4 +1,4 @@
-require('coffee-script/register')
+require('coffeescript/register')
 const os = require('os');
 const path = require('path');
 const FocaBotCore = require('focabot-core');
